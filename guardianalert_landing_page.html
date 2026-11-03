@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardianAlert | Real-Time Scam Protection for Families in Tallaght</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        slateDark: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Pulse & Phone Simulation Animations */
+        @keyframes phonePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .animate-phone-pulse {
+            animation: phonePulse 2s infinite ease-in-out;
+        }
+        .slide-up {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar for Tallaght Pilot -->
+    <div class="bg-brand-900 text-brand-100 text-xs sm:text-sm py-2.5 px-4 text-center font-medium flex items-center justify-center gap-2">
+        <span class="bg-brand-700 text-white text-[10px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full">Pilot Program</span>
+        <span>Now launching exclusively for families in <strong>Tallaght Village & Dublin 24</strong></span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">Guardian<span class="text-brand-600">Alert</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#how-it-works" class="hover:text-brand-600 transition">How It Works</a>
+                <a href="#simulator" class="hover:text-brand-600 transition">Interactive Demo</a>
+                <a href="#features" class="hover:text-brand-600 transition">Features</a>
+                <a href="#trust" class="hover:text-brand-600 transition">Security & Privacy</a>
+            </nav>
+
+            <a href="#waitlist" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition shadow-sm hover:shadow">
+                Join Local Waitlist
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-teal-50/50 via-white to-slate-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-teal-100/80 text-brand-800 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+                            <i class="fa-solid fa-location-dot text-brand-600"></i> Designed for Dublin 24 Families
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight sm:leading-tight">
+                            Protect Your Parents' Savings in <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-teal-500">Real Time</span>
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Instant Open Banking alerts when unusual payments leave your elderly parent's account—so you can verify, call, and act before money disappears.
+                        </p>
+
+                        <!-- Quick Value Props Bullet List -->
+                        <div class="grid sm:grid-cols-2 gap-3 text-sm text-slate-700 pt-2 text-left max-w-lg mx-auto lg:mx-0">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                                <span>No account passwords shared</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                                <span>100% Read-Only Open Banking</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                                <span>Preserves parent dignity & control</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                                <span>Zero impact on regular pension payouts</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Form Card -->
+                        <div class="pt-4 max-w-md mx-auto lg:mx-0">
+                            <form id="heroForm" onsubmit="handleWaitlistSubmit(event, 'hero')" class="bg-white p-2.5 rounded-2xl shadow-xl border border-slate-200/80 flex flex-col sm:flex-row gap-2">
+                                <input type="email" required placeholder="Enter your email address..." class="flex-1 px-4 py-3 text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                                <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition flex items-center justify-center gap-2 whitespace-nowrap shadow-md">
+                                    <span>Get Early Access</span>
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </button>
+                            </form>
+                            <div id="heroSuccess" class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                                <span>You're on the Tallaght pilot list! We will reach out shortly.</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2 text-center lg:text-left">Free during local beta testing • Free cancel anytime</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual / Micro Interactive Teaser -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm">
+                            <!-- Background Accent Glow -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-teal-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                            
+                            <!-- Static Preview Mockup Card -->
+                            <div class="relative bg-slate-900 text-white rounded-3xl p-6 shadow-2xl border border-slate-800 space-y-5">
+                                <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold">
+                                            L
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-semibold">Liam's Account (AIB)</div>
+                                            <div class="text-xs text-slate-400">Monitoring Active • Tallaght</div>
+                                        </div>
+                                    </div>
+                                    <span class="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                        ● Protected
+                                    </span>
+                                </div>
+
+                                <!-- Sample Alert Banner -->
+                                <div class="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 space-y-3">
+                                    <div class="flex items-start justify-between">
+                                        <div class="flex items-center gap-2 text-red-400 font-semibold text-xs uppercase tracking-wider">
+                                            <i class="fa-solid fa-triangle-exclamation"></i> Anomaly Detected
+                                        </div>
+                                        <span class="text-[10px] text-slate-400">Just now</span>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-white">€850.00</div>
+                                        <div class="text-xs text-slate-300">To: Unrecognised Online Merchant</div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2 pt-1">
+                                        <button onclick="scrollToSimulator()" class="bg-red-600 hover:bg-red-700 text-white text-xs font-medium py-2 rounded-lg text-center transition">
+                                            Call Liam
+                                        </button>
+                                        <button onclick="scrollToSimulator()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium py-2 rounded-lg text-center transition">
+                                            Test Demo
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="text-center text-xs text-slate-500">
+                                    Simulating live notification feed for Dublin 24 caregivers
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem & Reality Section -->
+        <section class="py-16 bg-white border-y border-slate-200/80">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 max-w-2xl mx-auto">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-700">The Problem in Tallaght</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-slate-900">Scams move in seconds. Standard bank statements take days.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">Discovered Too Late</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Adult children usually spot unusual transfers days or weeks later while manually checking physical mail or online balances.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">Loss of Dignity</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Asking elderly parents for their bank passwords feels intrusive, making them feel like they are losing their financial independence.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-100 text-brand-700 flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-phone-slash"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">Impersonation Tactics</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Scammers pretend to be broadband providers or banks, tricking victims into authorizing payments on their own devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Phone Simulator Section -->
+        <section id="simulator" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <!-- Decorative Grid Background -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center space-y-4 max-w-2xl mx-auto mb-14">
+                    <span class="bg-brand-500/20 text-brand-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-brand-500/30">
+                        Interactive Live Prototype
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">Try the GuardianAlert Simulator</h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Simulate a €850 scam payment leaving Liam's account in Tallaght Village and see how GuardianAlert empowers Ciara to react instantly.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left Simulation Control Panel -->
+                    <div class="lg:col-span-5 space-y-6 bg-slate-800/80 backdrop-blur p-6 sm:p-8 rounded-3xl border border-slate-700">
+                        <h3 class="font-bold text-xl text-white flex items-center gap-2">
+                            <i class="fa-solid fa-sliders text-brand-400"></i> Simulator Controls
+                        </h3>
+                        <p class="text-sm text-slate-300">
+                            Click the button below to simulate an unusual transaction occurring on your parent's current account.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700 text-xs space-y-2">
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Account Owner:</span>
+                                    <span class="text-white font-medium">Liam (Parent, Tallaght)</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Alert Recipient:</span>
+                                    <span class="text-white font-medium">Ciara (Daughter, Kilnamanagh)</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>Threshold Limit:</span>
+                                    <span class="text-brand-400 font-bold">€100.00</span>
+                                </div>
+                            </div>
+
+                            <button id="triggerSimBtn" onclick="runSimulation()" class="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-3 text-base group">
+                                <i class="fa-solid fa-bolt text-amber-300 group-hover:scale-110 transition"></i>
+                                <span>Simulate €850 Scam Transfer</span>
+                            </button>
+
+                            <button id="resetSimBtn" onclick="resetSimulation()" class="w-full bg-slate-700 hover:bg-slate-600 text-slate-300 font-medium py-2.5 px-4 rounded-xl text-xs transition">
+                                Reset Demo State
+                            </button>
+                        </div>
+
+                        <!-- Step Tracker -->
+                        <div class="space-y-3 pt-4 border-t border-slate-700/80 text-xs text-slate-400">
+                            <div id="simStep1" class="flex items-center gap-2 text-slate-500">
+                                <i class="fa-solid fa-circle-dot"></i> 1. Payment initiated on parent's card
+                            </div>
+                            <div id="simStep2" class="flex items-center gap-2 text-slate-500">
+                                <i class="fa-solid fa-circle-dot"></i> 2. Open Banking Webhook triggers alert
+                            </div>
+                            <div id="simStep3" class="flex items-center gap-2 text-slate-500">
+                                <i class="fa-solid fa-circle-dot"></i> 3. Child receives lockscreen notification
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Phone Screen Frame -->
+                    <div class="lg:col-span-7 flex justify-center">
+                        <!-- Smartphone Frame Mockup -->
+                        <div class="w-full max-w-[340px] bg-slate-950 rounded-[45px] p-4 shadow-2xl border-4 border-slate-800 relative">
+                            <!-- Camera Notch -->
+                            <div class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-4 bg-slate-900 rounded-full z-30"></div>
+
+                            <!-- Screen Viewport -->
+                            <div class="bg-slate-900 rounded-[35px] overflow-hidden min-h-[560px] flex flex-col justify-between relative pt-8 pb-6 px-4 text-slate-100 border border-slate-800">
+                                
+                                <!-- Top Status Line -->
+                                <div class="flex justify-between items-center text-[11px] text-slate-400 px-2 pt-1">
+                                    <span>20:45</span>
+                                    <div class="flex gap-1.5 items-center">
+                                        <i class="fa-solid fa-wifi"></i>
+                                        <i class="fa-solid fa-battery-three-quarters"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Idle State Screen -->
+                                <div id="simIdleState" class="my-auto text-center space-y-4 py-12 transition">
+                                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mx-auto text-brand-400 text-2xl border border-slate-700">
+                                        <i class="fa-solid fa-shield-cat"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-sm">GuardianAlert Ready</div>
+                                        <div class="text-xs text-slate-400 mt-1">Listening for Liam's account events</div>
+                                    </div>
+                                    <div class="text-[11px] bg-slate-800/80 text-emerald-400 py-1.5 px-3 rounded-full inline-block border border-slate-700">
+                                        ● Open Banking Sync Active
+                                    </div>
+                                </div>
+
+                                <!-- Triggered Notification Banner (Pop-in) -->
+                                <div id="simNotification" class="hidden transition-all duration-300 translate-y-[-10px] my-auto">
+                                    <div class="bg-slate-800/95 border border-red-500/50 rounded-2xl p-4 shadow-2xl space-y-3">
+                                        <div class="flex items-center justify-between text-xs text-slate-400">
+                                            <span class="flex items-center gap-1.5 text-brand-400 font-bold">
+                                                <i class="fa-solid fa-shield"></i> GuardianAlert
+                                            </span>
+                                            <span>NOW</span>
+                                        </div>
+
+                                        <div class="space-y-1">
+                                            <div class="text-xs font-bold text-red-400 uppercase tracking-wide flex items-center gap-1">
+                                                <i class="fa-solid fa-triangle-exclamation"></i> Suspicious Payment
+                                            </div>
+                                            <div class="text-xl font-extrabold text-white">€850.00</div>
+                                            <div class="text-xs text-slate-300">To: <span class="text-amber-300 font-medium">Unrecognised Online Tech</span></div>
+                                        </div>
+
+                                        <div class="text-[11px] text-slate-400 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
+                                            Liam's Account (AIB) • Above €100 limit
+                                        </div>
+
+                                        <button onclick="openActionDrawer()" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+                                            <span>Take Emergency Action</span>
+                                            <i class="fa-solid fa-chevron-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Action Drawer Modal inside Phone -->
+                                <div id="simDrawer" class="hidden fixed inset-x-4 bottom-6 bg-slate-800 border border-slate-700 rounded-2xl p-4 shadow-2xl space-y-3 z-20">
+                                    <div class="flex items-center justify-between border-b border-slate-700 pb-2">
+                                        <span class="text-xs font-bold text-white">Recommended Steps</span>
+                                        <button onclick="closeActionDrawer()" class="text-slate-400 hover:text-white text-xs">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <a href="tel:0870000000" onclick="simLogAction('Called Liam')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 px-3 rounded-xl text-xs font-medium flex items-center gap-2 justify-center transition">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <span>Call Liam (Parent) Now</span>
+                                        </a>
+
+                                        <button onclick="simLogAction('Opened Fraud Line Directives')" class="w-full bg-slate-700 hover:bg-slate-600 text-slate-200 py-2.5 px-3 rounded-xl text-xs font-medium flex items-center gap-2 justify-center transition">
+                                            <i class="fa-solid fa-building-columns"></i>
+                                            <span>Open Bank Fraud Support</span>
+                                        </button>
+                                    </div>
+
+                                    <div id="simActionResult" class="hidden text-[11px] text-emerald-400 text-center pt-1 font-medium">
+                                        Action Recorded! Scam intercept logged.
+                                    </div>
+                                </div>
+
+                                <!-- Phone Footer Navigation Bar -->
+                                <div class="pt-2 border-t border-slate-800 flex justify-around text-slate-500 text-xs">
+                                    <span class="text-brand-400"><i class="fa-solid fa-house"></i></span>
+                                    <span><i class="fa-solid fa-clock-rotate-left"></i></span>
+                                    <span><i class="fa-solid fa-gear"></i></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="py-20 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-brand-700">Built for Safety & Dignity</h2>
+                    <p class="text-3xl font-extrabold text-slate-900">How GuardianAlert Works</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 space-y-4 hover:shadow-md transition">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Read-Only Open Banking</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Connected via regulated Irish Open Banking APIs (AISP). We never ask for password sharing, pin codes, or account control.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 space-y-4 hover:shadow-md transition">
+                        <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Custom Spend Thresholds</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Parents set their own comfort levels (e.g., only alert for payments over €100 or new payees). Regular groceries remain private.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 space-y-4 hover:shadow-md transition">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Instant One-Tap Intercept</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            When an alert triggers, adult children can call their parent with a single tap while the transaction details are right on screen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Security Badges -->
+        <section id="trust" class="py-16 bg-white border-t border-slate-200/80">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                    <div class="grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-8 space-y-4">
+                            <span class="text-brand-400 font-bold text-xs uppercase tracking-wider">Security First</span>
+                            <h2 class="text-2xl sm:text-3xl font-bold">Bank-Grade Privacy Standards</h2>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Built in accordance with European PSD2 Open Banking regulations and strict Irish data privacy guidelines.
+                            </p>
+                            <div class="flex flex-wrap gap-4 pt-2">
+                                <div class="flex items-center gap-2 bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700 text-xs">
+                                    <i class="fa-solid fa-lock text-emerald-400"></i> 256-bit SSL Encryption
+                                </div>
+                                <div class="flex items-center gap-2 bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700 text-xs">
+                                    <i class="fa-solid fa-shield-halved text-brand-400"></i> PSD2 Compliant API
+                                </div>
+                                <div class="flex items-center gap-2 bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700 text-xs">
+                                    <i class="fa-solid fa-user-check text-amber-400"></i> Consent-Based Access
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 flex justify-center">
+                            <div class="w-28 h-28 rounded-full bg-brand-500/10 border-2 border-brand-500/30 flex items-center justify-center text-brand-400 text-5xl">
+                                <i class="fa-solid fa-building-shield"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Sign-Up Section -->
+        <section id="waitlist" class="py-20 bg-slate-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-200 text-center space-y-6">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-2xl flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Join the Tallaght Pilot Program</h2>
+                        <p class="text-sm text-slate-600">
+                            We are accepting 50 local families in Tallaght Village and Dublin 24 for early, free access to GuardianAlert.
+                        </p>
+                    </div>
+
+                    <form id="ctaForm" onsubmit="handleWaitlistSubmit(event, 'cta')" class="space-y-4 max-w-md mx-auto text-left">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="e.g. Ciara Murphy" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                            <input type="email" required placeholder="ciara@example.ie" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Eircode or Area in Tallaght</label>
+                            <input type="text" placeholder="e.g. Dublin 24 / Kilnamanagh" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 px-6 rounded-xl transition shadow-md text-sm">
+                            Register Interest for Free Beta
+                        </button>
+                    </form>
+
+                    <div id="ctaSuccess" class="hidden p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm space-y-1">
+                        <div class="font-bold flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Application Submitted!
+                        </div>
+                        <p class="text-xs text-emerald-700">Thank you for joining our Dublin 24 community pilot. We will contact you via email soon.</p>
+                    </div>
+
+                    <p class="text-xs text-slate-400">
+                        National College of Ireland FinTech Startup Project • Tallaght Village Focus
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-500 text-base"></i>
+                <span class="font-bold text-white text-sm">GuardianAlert Ireland</span>
+            </div>
+            <div>
+                Created for MSc FinTech Innovation • Tallaght Village, Dublin 24
+            </div>
+            <div>
+                © 2026 GuardianAlert. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Simulation state variables
+        let isSimRunning = false;
+
+        function runSimulation() {
+            if (isSimRunning) return;
+            isSimRunning = true;
+
+            const triggerBtn = document.getElementById('triggerSimBtn');
+            const idleState = document.getElementById('simIdleState');
+            const notification = document.getElementById('simNotification');
+            const drawer = document.getElementById('simDrawer');
+            
+            const step1 = document.getElementById('simStep1');
+            const step2 = document.getElementById('simStep2');
+            const step3 = document.getElementById('simStep3');
+
+            // Reset drawer state
+            drawer.classList.add('hidden');
+            document.getElementById('simActionResult').classList.add('hidden');
+
+            // Step 1: Trigger
+            triggerBtn.innerText = 'Processing Open Banking Event...';
+            step1.className = 'flex items-center gap-2 text-amber-400 font-medium';
+
+            setTimeout(() => {
+                // Step 2: Webhook Triggered
+                step1.className = 'flex items-center gap-2 text-emerald-400';
+                step2.className = 'flex items-center gap-2 text-amber-400 font-medium';
+            }, 600);
+
+            setTimeout(() => {
+                // Step 3: Notification Pop-in
+                step2.className = 'flex items-center gap-2 text-emerald-400';
+                step3.className = 'flex items-center gap-2 text-emerald-400 font-medium';
+
+                idleState.classList.add('hidden');
+                notification.classList.remove('hidden');
+
+                triggerBtn.innerText = 'Simulate €850 Scam Transfer';
+                isSimRunning = false;
+            }, 1200);
+        }
+
+        function resetSimulation() {
+            isSimRunning = false;
+            document.getElementById('simIdleState').classList.remove('hidden');
+            document.getElementById('simNotification').classList.add('hidden');
+            document.getElementById('simDrawer').classList.add('hidden');
+            document.getElementById('simActionResult').classList.add('hidden');
+
+            document.getElementById('simStep1').className = 'flex items-center gap-2 text-slate-500';
+            document.getElementById('simStep2').className = 'flex items-center gap-2 text-slate-500';
+            document.getElementById('simStep3').className = 'flex items-center gap-2 text-slate-500';
+
+            document.getElementById('triggerSimBtn').innerText = 'Simulate €850 Scam Transfer';
+        }
+
+        function openActionDrawer() {
+            document.getElementById('simDrawer').classList.remove('hidden');
+        }
+
+        function closeActionDrawer() {
+            document.getElementById('simDrawer').classList.add('hidden');
+        }
+
+        function simLogAction(actionName) {
+            const result = document.getElementById('simActionResult');
+            result.innerText = `Action Executed: ${actionName}`;
+            result.classList.remove('hidden');
+        }
+
+        function scrollToSimulator() {
+            document.getElementById('simulator').scrollIntoView({ behavior: 'smooth' });
+            runSimulation();
+        }
+
+        function handleWaitlistSubmit(event, formType) {
+            event.preventDefault();
+            if (formType === 'hero') {
+                document.getElementById('heroForm').classList.add('hidden');
+                document.getElementById('heroSuccess').classList.remove('hidden');
+            } else if (formType === 'cta') {
+                document.getElementById('ctaForm').classList.add('hidden');
+                document.getElementById('ctaSuccess').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
